@@ -9,8 +9,7 @@ import Service from "./Components/Service/Service";
 function App() {
   return (
     <div className="App">
-      <div id="home"><Navbar /></div>
-      
+      <Navbar />
       <Hero></Hero>
       <About></About>
       <Service></Service>
