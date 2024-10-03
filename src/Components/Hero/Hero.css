@@ -61,3 +61,8 @@
     border-color: #b415ff;
     transform: scale(1.05);
 }
+.hero-resume a{
+    text-decoration: none;
+    outline: none;
+    color: white;
+}

@@ -3,6 +3,7 @@ import './Hero.css';
 import profile from '../../assets/avi.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 const Hero = () => {
+
   return (
     <div className='hero' id='home'>
       <img src={profile} alt='profile'/>
@@ -10,7 +11,7 @@ const Hero = () => {
       <p>Aspiring Technology Professional | Junior Software Engineer at MRV IT SOLUTIONS Pvt Ltd. | Frontend Developer | Post Graduate (Master of Technology) in Power Electronics and Electrical Drives</p>   
       <div className='hero-action'>
         <div className='hero-connect'><AnchorLink className='anchor' offset={50} href='#contact'>Connect with me</AnchorLink></div>
-        <div className='hero-resume'>My resume</div>
+        <div className='hero-resume'><a href='resume.pdf' download='Avinash_resume'>My resume</a></div>
       </div>
     </div>
   )
