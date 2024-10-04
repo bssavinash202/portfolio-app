@@ -4,7 +4,34 @@ import theme from '../../assets/theme_pattern.svg';
 import mail from '../../assets/mail_icon.svg';
 import location from '../../assets/location_icon.svg';
 import call from '../../assets/call_icon.svg'
+import { toast } from 'react-toastify';
 const Contact = () => {
+
+    const onSubmit = async (event) => {
+        event.preventDefault();
+        const formData = new FormData(event.target);
+    
+        formData.append("access_key", "868372e0-622b-489d-85e9-24f336340469");
+    
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
+    
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json"
+          },
+          body: json
+        }).then((res) => res.json());
+    
+        if (res.success) {
+          toast.success('Sent Successfully',{
+            theme:'colored'
+          });
+        }
+      };
+
   return (
     <div className='contact' id='contact'>
         <div className='contact-title'>
@@ -27,7 +54,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
-            <form className='contact-right'>
+            <form onSubmit={onSubmit} className='contact-right'>
                 <label htmlFor=''>Your Name</label><input type='text' placeholder='Enter your Name' name='name'></input>
                 <label htmlFor=''>Your Email</label><input type='email' placeholder='Enter your Email' name='email'></input>
                 <label htmlFor=''>Write Your Message</label><textarea type='text' placeholder='Enter your Message' name='message' rows={8}/>

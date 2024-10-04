@@ -5,6 +5,7 @@ import Hero from "./Components/Hero/Hero";
 import MyWork from "./Components/Mywork/MyWork";
 import Navbar from "./Components/Navbar/Navbar";
 import Service from "./Components/Service/Service";
+import './App.css';
 
 function App() {
   return (
