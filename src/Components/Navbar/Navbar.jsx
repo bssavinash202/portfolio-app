@@ -22,7 +22,7 @@ const Navbar = () => {
       <img src={menu_open} onClick={openMenu} alt='' className='nav-menu-open' />
       <ul ref={menuRef} className='nav-menu'>
         <img src={menu_close} onClick={closeMenu} alt='' className='nav-menu-close'/>
-        <li><p onClick={()=>{setMenu('home')}}><AnchorLink className='anchor' href='#home'>Home</AnchorLink></p>{menu==='home'?<img src={underline} alt=''/>:<></>}</li>
+        <li><p onClick={()=>{setMenu('home')}}><AnchorLink className='anchor' offset={-50} href='#home'>Home</AnchorLink></p>{menu==='home'?<img src={underline} alt=''/>:<></>}</li>
         <li><p onClick={()=>{setMenu('about')}}><AnchorLink className='anchor' offset={50} href='#about'>About me</AnchorLink></p>{menu==='about'?<img src={underline} alt=''/>:<></>}</li>
         <li><p onClick={()=>{setMenu('services')}}><AnchorLink className='anchor' offset={50} href='#services'>Services</AnchorLink></p>{menu==='services'?<img src={underline} alt=''/>:<></>}</li>
         <li><p onClick={()=>{setMenu('portfolio')}}><AnchorLink className='anchor' offset={50} href='#portfolio'>Portfolio</AnchorLink></p>{menu==='portfolio'?<img src={underline} alt=''/>:<></>}</li>

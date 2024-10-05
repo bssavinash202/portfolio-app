@@ -29,6 +29,10 @@ const Contact = () => {
           toast.success('Sent Successfully',{
             theme:'colored'
           });
+          event.target.reset();
+        }
+        if(res===null){
+          toast.error('Error');
         }
       };
 

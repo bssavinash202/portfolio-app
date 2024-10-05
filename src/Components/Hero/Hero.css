@@ -5,7 +5,7 @@
     gap: 35px;
 }
 .hero img{
-    margin-top: 150px;
+    margin-top: 80px;
     transition: 0.5s;
 }
 .hero img:hover{
@@ -17,6 +17,7 @@
     width: 60%;
     font-size: 90px;
     font-weight: 600;
+    color: #fff;
 }
 .hero h1 span{
     background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
